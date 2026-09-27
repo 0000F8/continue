@@ -1,6 +1,6 @@
 ---
 title: "Example MCP Servers"
-keywords: [mcp, integrations, sentry, slack, linear, posthog, supabase, netlify, atlassian, github, sanity, snyk, dlt, chrome-devtools]
+keywords: [mcp, integrations, sentry, slack, linear, posthog, supabase, netlify, atlassian, github, sanity, snyk, dlt, chrome-devtools, salt]
 ---
 
 Ready-to-use MCP server configurations for popular tools and services. Copy these into your `config.yaml` to get started.
@@ -182,6 +182,19 @@ mcpServers:
 ```
 
 See also: [Chrome DevTools MCP guide](/guides/chrome-devtools-mcp-performance)
+
+## Salt
+
+Salt's MCP server lets an agent message contacts, ask a human a question with tappable buttons, and send or pay invoices, inside Salt's end-to-end encrypted chat.
+
+```yaml
+mcpServers:
+  - name: Salt
+    type: streamable-http
+    url: https://mcp.saltapp.ai/mcp
+```
+
+Authentication is OAuth 2.1 with PKCE and dynamic client registration — no client id or secret to register anywhere. At the consent screen, choose the `chat` and/or `money` scope.
 
 ## Other guides
 
